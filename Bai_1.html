@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Bài 1 Kiểm tra số nguyên tố</title>
+</head>
+
+<body>
+    <script>
+        function check(n) {
+            test = true;
+            if (n < 2) {
+                test = false;
+            }
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0) {
+                    test = false;
+                }
+                if (n == 2) test = true;
+            }
+            return test;
+        }
+        var value = parseInt(prompt("Nhập vào số muốn kiểm tra là số nguyên tố: "));
+        if (check(value)) {
+            document.write("Số " + value + " là số nguyên tố");
+        } else {
+            document.write("Số " + value + " ko phải là số nguyên tố ");
+        }
+    </script>
+</body>
+
+</html>
